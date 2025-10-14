@@ -1,0 +1,50 @@
+product_id,name,category,image_url
+1,Samsung Galaxy S25,Electronics,https://images.samsung.com/is/image/samsung/assets/my/smartphones/galaxy-s25/buy/S25FE_Color_Selection_Navy_MO_720x480.jpg?imbypass=true
+2,Samsung Galaxy Flip6,Electronics,https://images.unsplash.com/photo-1721864428881-dbabb9ea0017?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074
+3,Nothing Phone (1),Electronics,https://images.unsplash.com/photo-1668064908750-c117aa900d47?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+4,Nike Dunk Low Retro,Footware,https://images.unsplash.com/photo-1743573874967-d27623402d44?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074
+5,Parle G Gluco Biscuits,Groceries,https://images.unsplash.com/photo-1706380062542-c64d66badf8f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880
+6,Tommy Hilfiger Leather Belt,Accessories,https://images.unsplash.com/photo-1664286074240-d7059e004dff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VG9tbXklMjBIaWxmaWdlciUyMExlYXRoZXIlMjBCZWx0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600
+7,KitKat,Groceries,https://images.unsplash.com/photo-1604815891325-0f9c17688328?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+8,Veg Hakka Noodles,Groceries,https://images.unsplash.com/photo-1719785046018-8f599ef38984?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1148
+9,Classic Leather Watch,Accessories,https://images.unsplash.com/photo-1523275335684-37898b6baf30
+10,White Running Shoes,Footwear,https://images.unsplash.com/photo-1698018574308-929deec9f832?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074
+11,Modern Wooden Chair,Furniture,https://images.unsplash.com/photo-1598300042247-d088f8ab3a91
+12,Black Cotton T-Shirt,Apparel,https://images.unsplash.com/photo-1583743814966-8936f5b7be1a
+13,Classic White Tee,Apparel,https://images.unsplash.com/photo-1722310752951-4d459d28c678?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764
+14,Amul Dark Chocolate,Groceries,https://images.unsplash.com/photo-1646168932800-e48f378d37bb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=663
+15,Nestle Coffee,Groceries,https://images.unsplash.com/photo-1618401375010-d0a57ec113fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+16,RayBan Sunglasses,Apparel,https://images.unsplash.com/photo-1659506425360-f04a041e90df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+18,iPhone 17 Pro,Electronics,https://images.unsplash.com/photo-1758784211688-ab9177d65bb3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735
+19,iPhone 5s,Electronics,https://images.unsplash.com/photo-1529618160092-2f8ccc8e087b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+20,Reebok Cricket Bat,Sports,https://images.unsplash.com/photo-1646282814550-f521d9b57a59?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627
+21,SS Yorker Leather Cricket Ball,Sports,https://images.unsplash.com/photo-1690111354184-cceee42df518?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+22,Size 6 BasketBall,Sports,https://plus.unsplash.com/premium_photo-1668767725891-58f5cd788105?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+23,Nike Soccer Ball,Sports,https://images.unsplash.com/photo-1571354188019-9a5038b88457?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=732
+24,Amul Chocolate Brownie Ice Cream,Groceries,https://images.unsplash.com/photo-1701261919026-d6ce6cb9be0f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=741
+25,Lakme Sunscreen,Skincare,https://images.unsplash.com/photo-1698912198250-fb0c5ecccc6e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fFN1bnNjcmVlbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600
+26,Boro Plus Cream,Skincare,https://www.bbassets.com/media/uploads/p/l/315431_3-boroplus-cream-antiseptic.jpg
+27,Oreos,Groceries,https://images.unsplash.com/photo-1599629954294-14df9ec8bc05?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=765
+28,illfordd furniture Engineered Wood Office Table,Furniture,https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735
+29,Mesh Executive Chair,Furniture,https://plus.unsplash.com/premium_photo-1666990809668-1d3e257d8c29?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=745
+30,Nilkamal Mozart Queen Bed,Furniture,https://images.unsplash.com/photo-1560449752-ac541afdd6b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+31,Samsung Crystal 4K Smart TV,Electronics,https://plus.unsplash.com/premium_photo-1683141392308-aaa39d916686?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880
+32,SONY Play Station 5,Electronics,https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170
+33,Pringles Original,Electronics,https://images.unsplash.com/photo-1700339062616-11c7fc9a673d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=697
+34,Blue Jeans,Apparel,https://images.unsplash.com/photo-1714143164510-7833c904d8c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880
+35,Mens Short Kurta,Apparel,https://images.unsplash.com/photo-1622780432053-767528938f34?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a3VydGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+36,Samsung Galaxy Tab S9,Electronics,https://images.unsplash.com/photo-1661595677106-fcc3f6ed7531?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+37,Kinley Water Bottle,Beverages,https://images.unsplash.com/photo-1638688569176-5b6db19f9d2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8S2lubGV5JTIwV2F0ZXIlMjBCb3R0bGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+38,Maaza Mango Drink,Beverages,https://images.unsplash.com/photo-1657600704994-ea5020a66231?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1932
+39,Coca Cola,Beverages,https://images.unsplash.com/photo-1667204651371-5d4a65b8b5a9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q29jYSUyMENvbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+40,Pepsi,Beverages,https://images.unsplash.com/photo-1684404338815-1a96df02a839?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+41,Doritos Wasabi,Groceries,https://images.unsplash.com/photo-1600952841320-db92ec4047ca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RG9yaXRvc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600
+42,Aquafina Water Bottle,Beverages,https://images.unsplash.com/photo-1629470937827-9f1c9b9df448?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFxdWFmaW5hJTIwV2F0ZXIlMjBCb3R0bGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+43,Macbook Air,Electronics,https://images.unsplash.com/photo-1651241680016-cc9e407e7dc3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fE1hY2Jvb2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+44,Syska LED,Electronics,https://images.unsplash.com/photo-1641113403042-0b6f6e5e0a35?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3lza2ElMjBMRUR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+45,Amazon Alexa Dot,Electronics,https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074
+46,JBL Speakers,Electronics,https://images.unsplash.com/photo-1558537348-c0f8e733989d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070
+47,Mustang GT-500,Automobile,https://images.unsplash.com/photo-1597274324473-c3ced481af9c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+48,Toyota Supra 1990,Automobile,https://images.unsplash.com/photo-1627008119017-f89d9704a799?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764
+49,Shure SM58 Mic,Electronics,https://plus.unsplash.com/premium_photo-1672837630994-5c0a5f890fd8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
+50,RODE PodMic Broadcast Microphone,Electronics,https://images.unsplash.com/photo-1636127740628-13bf7ce4f7ff?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687
