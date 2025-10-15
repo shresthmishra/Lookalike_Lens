@@ -4,7 +4,7 @@ from typing import Optional, List
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from transformers import CLIPProcessor, CLIPModel
+from transformers import ViTImageProcessor, ViTModel
 from pymilvus import connections, Collection
 import psycopg2
 from psycopg2.pool import SimpleConnectionPool
@@ -29,11 +29,11 @@ MILVUS_PASSWORD = os.getenv("MILVUS_PASSWORD")
 LOCAL_MILVUS_HOST = "127.0.0.1"
 LOCAL_MILVUS_PORT = "19530"
 COLLECTION_NAME = "product_vectors"
-MODEL_NAME = "Xenova/clip-vit-base-patch32"
+MODEL_NAME = "google/vit-base-patch32-224-in21k"
 
 @app.on_event("startup")
 def startup_event():
-    print("Loading AI model..."); app.state.model = CLIPModel.from_pretrained(MODEL_NAME); app.state.processor = CLIPProcessor.from_pretrained(MODEL_NAME); print("AI model loaded.")
+    print("Loading AI model (ViT)..."); app.state.model = ViTModel.from_pretrained(MODEL_NAME); app.state.processor = ViTImageProcessor.from_pretrained(MODEL_NAME); print("AI model loaded.")
     print("Connecting to Milvus...")
     if MILVUS_URI: connections.connect("default", uri=MILVUS_URI, user=MILVUS_USER, password=MILVUS_PASSWORD)
     else: connections.connect("default", host=LOCAL_MILVUS_HOST, port=LOCAL_MILVUS_PORT)
@@ -43,16 +43,17 @@ def startup_event():
     app.state.db_pool = SimpleConnectionPool(minconn=1, maxconn=5, dsn=dsn); print("Database pool created.")
 
 def get_image_vector(image: Image.Image):
-    inputs = app.state.processor(text=None, images=image, return_tensors="pt", padding=True)
-    vector = app.state.model.get_image_features(**inputs).detach().numpy()[0]
+    inputs = app.state.processor(images=image, return_tensors="pt")
+    outputs = app.state.model(**inputs)
+    vector = outputs.last_hidden_state.mean(dim=1).detach().numpy()[0]
     return vector.tolist()
 
 @app.post("/api/v1/search", response_model=SearchResponse)
 async def search(image_file: Optional[UploadFile]=File(None), image_url: Optional[str]=Form(None)):
     image = None
-    if image_file: image = Image.open(io.BytesIO(await image_file.read()))
+    if image_file: image = Image.open(io.BytesIO(await image_file.read())).convert("RGB")
     elif image_url:
-        try: response = requests.get(image_url, stream=True); response.raise_for_status(); image = Image.open(response.raw)
+        try: response = requests.get(image_url, stream=True); response.raise_for_status(); image = Image.open(response.raw).convert("RGB")
         except Exception as e: return {"status": "error", "message": f"Could not open image from URL: {e}"}
     if not image: return {"status": "error", "message": "No image or URL provided."}
     query_vector = get_image_vector(image)

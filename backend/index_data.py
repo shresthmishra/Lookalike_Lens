@@ -1,6 +1,6 @@
 import os, csv, requests
 from PIL import Image
-from transformers import CLIPProcessor, CLIPModel
+from transformers import ViTImageProcessor, ViTModel
 from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
 import psycopg2
 
@@ -13,13 +13,13 @@ MILVUS_USER = os.getenv("MILVUS_USER")
 MILVUS_PASSWORD = os.getenv("MILVUS_PASSWORD")
 LOCAL_MILVUS_HOST = "127.0.0.1"
 LOCAL_MILVUS_PORT = "19530"
-MODEL_NAME = "Xenova/clip-vit-base-patch32"
-VECTOR_DIMENSION = 512
+MODEL_NAME = "google/vit-base-patch32-224-in21k"
+VECTOR_DIMENSION = 768
 COLLECTION_NAME = "product_vectors"
 
-print("Loading AI model (CLIP)...")
-model = CLIPModel.from_pretrained(MODEL_NAME)
-processor = CLIPProcessor.from_pretrained(MODEL_NAME)
+print("Loading AI model (ViT)...")
+model = ViTModel.from_pretrained(MODEL_NAME)
+processor = ViTImageProcessor.from_pretrained(MODEL_NAME)
 print("AI model loaded.")
 
 print("Connecting to Milvus...")
@@ -50,7 +50,6 @@ try:
     cursor.execute("TRUNCATE TABLE products")
     print("Products table is ready.")
 
-    print("Loading data from products.csv into the database...")
     with open('products.csv', 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
@@ -63,15 +62,15 @@ try:
     cursor.execute("SELECT product_id, image_url FROM products")
     products = cursor.fetchall()
     
-    print(f"Found {len(products)} products. Starting vector indexing...")
     for product in products:
         product_id, image_url = product
         try:
             image_response = requests.get(image_url, stream=True)
             image_response.raise_for_status()
-            image = Image.open(image_response.raw)
-            inputs = processor(text=None, images=image, return_tensors="pt", padding=True)
-            vector = model.get_image_features(**inputs).detach().numpy()[0]
+            image = Image.open(image_response.raw).convert("RGB")
+            inputs = processor(images=image, return_tensors="pt")
+            outputs = model(**inputs)
+            vector = outputs.last_hidden_state.mean(dim=1).detach().numpy()[0]
             entities = [[product_id], [vector]]
             collection.insert(entities)
             print(f"Successfully inserted vector for product ID: {product_id}")
