@@ -2,20 +2,18 @@ import os, csv, requests
 from PIL import Image
 from transformers import CLIPProcessor, CLIPModel
 from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
-import mysql.connector
+import psycopg2
 
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_USER = os.getenv("DB_USER", "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 DB_NAME = os.getenv("DB_NAME", "lookalike_lens_db")
-
 MILVUS_URI = os.getenv("MILVUS_URI")
 MILVUS_USER = os.getenv("MILVUS_USER")
 MILVUS_PASSWORD = os.getenv("MILVUS_PASSWORD")
 LOCAL_MILVUS_HOST = "127.0.0.1"
 LOCAL_MILVUS_PORT = "19530"
-
-MODEL_NAME = "openai/clip-vit-base-patch32"
+MODEL_NAME = "Xenova/clip-vit-base-patch32"
 VECTOR_DIMENSION = 512
 COLLECTION_NAME = "product_vectors"
 
@@ -26,10 +24,8 @@ print("AI model loaded.")
 
 print("Connecting to Milvus...")
 if MILVUS_URI:
-    print("Connecting to Zilliz Cloud...")
     connections.connect("default", uri=MILVUS_URI, user=MILVUS_USER, password=MILVUS_PASSWORD)
 else:
-    print("Connecting to local Milvus...")
     connections.connect("default", host=LOCAL_MILVUS_HOST, port=LOCAL_MILVUS_PORT)
 print("Connected to Milvus.")
 
@@ -46,8 +42,8 @@ collection = Collection(name=COLLECTION_NAME, schema=schema)
 print(f"Milvus collection '{COLLECTION_NAME}' created.")
 
 try:
-    print("Connecting to target database...")
-    db_conn = mysql.connector.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
+    print("Connecting to target PostgreSQL database...")
+    db_conn = psycopg2.connect(host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD)
     cursor = db_conn.cursor()
 
     cursor.execute("CREATE TABLE IF NOT EXISTS products (product_id INT PRIMARY KEY, name VARCHAR(255), category VARCHAR(100), image_url TEXT)")
@@ -55,7 +51,7 @@ try:
     print("Products table is ready.")
 
     print("Loading data from products.csv into the database...")
-    with open('products.csv', 'r') as csvfile:
+    with open('products.csv', 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             sql = "INSERT INTO products (product_id, name, category, image_url) VALUES (%s, %s, %s, %s)"
@@ -64,7 +60,6 @@ try:
     db_conn.commit()
     print("Data loaded into database successfully.")
 
-    print("Fetching product data for indexing...")
     cursor.execute("SELECT product_id, image_url FROM products")
     products = cursor.fetchall()
     
@@ -93,9 +88,7 @@ try:
 except Exception as err:
     print(f"An error occurred: {err}")
 finally:
-    if 'cursor' in locals():
-        cursor.close()
-    if 'db_conn' in locals() and db_conn.is_connected():
-        db_conn.close()
+    if 'cursor' in locals(): cursor.close()
+    if 'db_conn' in locals(): db_conn.close()
     connections.disconnect("default")
     print("Database and Milvus connections closed.")
