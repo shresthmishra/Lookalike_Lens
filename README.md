@@ -6,7 +6,7 @@ Lookalike Lens is a full-stack web application that allows users to find visuall
 
 ---
 
-## Features
+## ✨ Features
 
 * **Image Upload:** Supports both direct file uploads and image URLs as input.
 * **Visual Search:** Utilizes a Vision Transformer (ViT) AI model to generate vector embeddings and find similar products.
@@ -14,7 +14,7 @@ Lookalike Lens is a full-stack web application that allows users to find visuall
 * **Dynamic Filtering:** Allows users to filter the results in real-time based on a similarity threshold.
 * **Mobile Responsive Design:** A modern UI that works beautifully on both desktop and mobile devices.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 * **Frontend:** Vite, React, Material-UI (MUI)
 * **Backend:** Python, FastAPI
@@ -26,7 +26,7 @@ Lookalike Lens is a full-stack web application that allows users to find visuall
     * Frontend on Vercel
     * Backend on Hugging Face Spaces
 
-## Running Locally
+## 🚀 Running Locally
 
 ### Backend
 
