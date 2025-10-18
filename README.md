@@ -1,4 +1,4 @@
-# Lookalike Lens
+# Lookalike Lens - A Visual Product Matcher
 
 Lookalike Lens is a full-stack web application that allows users to find visually similar products by uploading an image or providing an image URL.
 
