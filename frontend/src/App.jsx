@@ -91,7 +91,7 @@ function App() {
                     </Box>
                 )}
             </Box>
-            <Typography align="center" color="text.secondary">© Made by Shresth after pulling an allnighter.</Typography>
+            <Typography align="center" color="text.secondary">Have a good one!</Typography>
         </Container>
     );
 }
